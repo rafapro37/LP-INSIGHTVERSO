@@ -12,6 +12,7 @@ import {
   Globe,
   Star,
 } from "lucide-react";
+import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 
 const HOTMART_URL =
   "https://hotmart.com/pt-br/marketplace/produtos/hagsxd-clube-dos-5-ao7oc/E103234541H?system=product_page";
@@ -201,8 +202,8 @@ function HeroSection() {
 
       {/* Background image with dark overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1758874384930-6e1452bb9c71?w=1600&h=900&fit=crop&auto=format"
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1674767597051-37af3b73c2ca?w=1600&h=900&fit=crop&auto=format"
           alt="Pessoa empolgada com resultado no computador"
           className="w-full h-full object-cover opacity-10"
         />
@@ -279,9 +280,9 @@ function HeroSection() {
 
         <div className="mt-16 flex items-center justify-center gap-8 flex-wrap">
           {[
-            ["500+", "Membros ativos"],
             ["R$ 20", "Por mês"],
             ["100%", "Para iniciantes"],
+            ["Cancele", "Quando quiser"],
           ].map(([n, l]) => (
             <div key={l} className="flex flex-col items-center">
               <span
@@ -455,18 +456,18 @@ function CommunitySection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {[
             {
-              src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop&auto=format",
+              src: "https://images.unsplash.com/photo-1750322769147-6ae0d3fceb86?w=600&h=400&fit=crop&auto=format",
               alt: "Workspace de empreendedor digital com laptop e caderno",
               caption: "Trabalhe de qualquer lugar",
             },
             {
-              src: "https://images.unsplash.com/photo-1768055104923-a6f76e7478c7?w=600&h=400&fit=crop&auto=format",
+              src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format",
               alt: "Gráficos de crescimento e análise de resultados digitais",
               caption: "Acompanhe seus resultados",
             },
             {
-              src: "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?w=600&h=400&fit=crop&auto=format",
-              alt: "MacBook com dashboard de negócio digital",
+              src: "https://images.unsplash.com/photo-1760611656071-a8bef0578874?w=600&h=400&fit=crop&auto=format",
+              alt: "Escritório moderno com vista para a cidade representando negócio digital",
               caption: "Seu negócio na palma da mão",
             },
           ].map(({ src, alt, caption }) => (
@@ -478,7 +479,7 @@ function CommunitySection() {
                 background: "#0a0f1e",
               }}
             >
-              <img
+              <ImageWithFallback
                 src={src}
                 alt={alt}
                 className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
@@ -760,7 +761,7 @@ function OfferSection() {
         </div>
 
         <p className="text-xs" style={{ fontFamily: "Inter, sans-serif", color: "#3d5270" }}>
-          Mais de 500 pessoas já começaram. Sua vez é agora.
+          Sem burocracia. Cancele quando quiser. Sua vez é agora.
         </p>
       </div>
     </section>
